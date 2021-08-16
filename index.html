@@ -12,34 +12,34 @@
 </head>
 <body>
     <div class="jumbotron text-center">
-        <label for="enter number">enter the number</label>
-        <input type="text" id="">
-        <button class="btn" style="background-color: rgb(139, 107, 170);">check</button>
-        <button onclick="myFunction()" id="myBtn"></button>
+        <input type="text" placeholder="enter the value" id="text1" value="">
+        <input type="button" value="Check" onClick="result()" id="btn">
+        <input type="button" value="back" onClickback="">
+        <label for=""id="result"></label>
     </div>
     <script>
-     function prime(num)   
+     var result=function()   
      {
     var array=[];
-    var number=array[0],flag=0;
-     }
-     document.write("enter the string");
-    for(var i= 2;i<number; i++)
+    var flag=0;
+    array=document.getElementById("text1").value;
+    for(var i= 2;i<=array[0]/2; i++)
     {
-    if (number%i== 0)
+    if (array[0]%i== 0)
      {
-        document.write("not a prime number");
+        document.getElementById("result").innerHTML="not a prime number";
         flag=1;
+     }
     }
     if ( flag == 0) 
-    {
-    document.write(" prime number");
-    }
+     {
+     document.getElementById("result").innerHTML="prime number";
      }
-     function myFunction() {
-     var x = document.getElementById("myBtn").innerText;
-     document.getElementsByTagName("input").innerHTML = x;  
-}
+    }
+    //frequent
+    var array=[];
+    var flag=0;
+
 </script>
 </body>
 </html>
