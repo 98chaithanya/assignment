@@ -11,12 +11,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="jumbotron text-center">odd or even<br>
+        <!-- <input type="text" placeholder="enter the value" id="text4" value=""> -->
+        <input type="button" value="check" onClick="num()" id="btn">
+        <input type="button" value="back" onclick="" id="btn">
+        <label for="" id="result3"></label>
     <div class="jumbotron text-center">truncate<br>
         <input type="text" placeholder="enter the value" id="text4" value="">
         <input type="text" placeholder="enter the value" id="text5" value="">
         <input type="button" value="Check" onClick="truncate()" id="btn">
         <input type="button" value="back" onClickback="">
         <label for=""id="result4"></label></div>
+     <div class="jumbotron text-center">pyramid<br>
+            <input type="text" placeholder="enter the value" id="text3" value="">
+            <input type="button" value="Check" onClick="pyramid()" id="btn">
+            <input type="button" value="back" onClickback="">
+            <label for=""id="result5"></label></div>
+     <div class="jumbotron text-center">larger<br>
+                <input type="text" placeholder="enter the value" id="text6" value="">
+                <input type="text" placeholder="enter the value" id="text7" value="">
+                <input type="button" value="Check" onClick="large()" id="btn">
+                <input type="button" value="back" onClickback="">
+                <label for=""id="result6"></label></div> 
+    <div class="jumbotron text-center">javascript<br>
+                    <input type="button" value="Check" onClick="javascript()" id="btn">
+                    <input type="button" value="back" onClickback="">
+                    <label for=""id="result7"></label></div>                 
     <script>
         function truncate()
         {
@@ -33,8 +53,67 @@
       document.getElementById("result4").innerHTML= string.slice(0,limit)+"...";
      }
     } 
-
-
+    //
+    function pyramid()
+    {
+    let str=[];
+    var num;
+    var num=document.getElementById("text3").value;
+    for(var i=0;i<num;i++)
+    {
+    for(var j=0;j<i;j++)
+    {
+    str+="*";
+    }
+    str+="<br>";
+}
+    document.getElementById("result5").innerHTML=str;
+}
+//
+function num(){
+    var result;
+  for(i=0;i<=15;i++)
+  {
+  if(i%2==0)
+  {
+    //var  result=document.getElementById("result3").innerHTML=i+"number is even";
+      alert(i+"number is even");
+  }
+  else
+  {
+    //var result= document.getElementById("result3").innerHTML=i+"number is odd";
+    alert(i+"number is even");
+  }
+  }   
+  document.getElementById("result3").innerHTML=result;
+}
+//
+function large(){
+      var num1=document.getElementById("text6").value;
+      var num2=document.getElementById("text7").value;
+  if(num1>num2)
+  {
+     document.getElementById("result6").innerHTML="first number is large";
+  }
+  else
+  {
+     document.getElementById("result6").innerHTML="second number is large";
+  }
+  }  
+//function javascript()
+{
+    let string="javascript";
+    var str=" ";
+    for(var i=0;i<string.length;i++)
+    {
+    for(var j=0;j<i;j++)
+    {
+    str+=string[j];
+    }
+    str+="<br>";
+}
+    document.getElementById("result7").innerHTML=str;
+}
 
 
     </script>
